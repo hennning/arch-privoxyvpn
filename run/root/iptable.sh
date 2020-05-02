@@ -118,7 +118,7 @@ iptables -P FORWARD DROP
 ip6tables -P FORWARD DROP 1>&- 2>&-
 
 # set policy to nat traffic from opened port @ vpn provider to plex
-iptables -t nat -I PREROUTING -p tcp --dport 60474 -j REDIRECT --to-ports 32400
+iptables -t nat -I PREROUTING -p tcp --dport 32109 -j REDIRECT --to-ports 32400
 
 # output iptable rules
 ###
